@@ -10,7 +10,7 @@ const Post = require('./router/post');
 const dotenv = require('dotenv');
 dotenv.config();
 
-mongoose.connect(process.env.MONGODB_URL).then(() => {
+mongoose.connect(process.env.MONGODB_URI).then(() => {
     console.log('Connected to MongoDB');
 }).catch(err => console.log(err));
 
