@@ -19,6 +19,11 @@ mongoose.connect(process.env.MONGODB_URL).then(() => {
 app.use(cors());
 app.use(express.json());
 
+app.get('/', (req, res) => {
+    res.send("Production running fine");
+});
+
+
 app.use("/api/user",User);
 app.use("/api/post",Post);
 
